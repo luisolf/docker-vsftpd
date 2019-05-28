@@ -16,6 +16,7 @@ RUN yum install -y \
 	db4 && yum clean all
 
 RUN usermod -u ${USER_ID} ftp
+RUN groupmod -g 5033 tape
 RUN groupmod -g ${GROUP_ID} ftp
 
 ENV FTP_USER **String**
